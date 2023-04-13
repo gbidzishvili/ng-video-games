@@ -1,0 +1,13 @@
+<div class="search-container">
+  <form class="search-form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <span class="logo">NgVGDB</span>
+    <input
+      type="text"
+      formControlName="searh-input"
+      name="search"
+      class="search-input"
+      placeholder="Search 500 000+ games"
+    />
+    <button class="search-button">Search</button>
+  </form>
+</div>
