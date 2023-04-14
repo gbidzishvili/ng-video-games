@@ -21,8 +21,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     private httpService: HttpService
   ) {}
   ngOnInit(): void {
-    // this.game.background_image =
-    //   'https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg';
+    window.scrollTo(0, 0);
     this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
       this.gameId = params['id'];
       this.getGameDetails(this.gameId);
