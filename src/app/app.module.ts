@@ -16,9 +16,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpService } from './services/http.service';
 import { DetailsComponent } from './components/details/details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, HomeComponent, DetailsComponent, GameTabsComponent],
+  declarations: [AppComponent, SearchBarComponent, HomeComponent, DetailsComponent, GameTabsComponent, SideBarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

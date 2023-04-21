@@ -12,13 +12,21 @@ import { HttpService } from 'src/app/services/http.service';
 export class HomeComponent implements OnInit, OnDestroy {
   public sort: string;
   public games: Array<Game>;
-  // private router: Router;
   public routeSub: Subscription;
   public gameSub: Subscription;
+  public options=[
+    "name",
+"released",
+"added",
+"created",
+"updated",
+"rating",
+"metacritic",
+  ]
   constructor(
     private httpService: HttpService,
     private activatedRoute: ActivatedRoute,
-    private router: Router // private router: Router
+    private router: Router
   ) {}
   ngOnInit() {
     this.routeSub = this.activatedRoute.params.subscribe((params: Params) => {

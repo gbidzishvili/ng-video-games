@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="genres">
+    <a class="home">home</a>
+    <div class="title">Genres</div>
+    <ul>
+      <li
+        *ngFor="let genre of genres; let i = index"
+        [ngClass]="{ 'display-none': showAllItems }"
+      >
+        <ng-container>
+          <a href="">
+            <img
+              src="../../../assets/images/genres/{{ genre }}.jpg"
+              alt="{{ genre | titlecase }}"
+            />
+            <a href=""> {{ genre | titlecase }} </a>
+          </a>
+        </ng-container>
+      </li>
+      <button (click)="showAllItems = !showAllItems">show_more</button>
+    </ul>
+  </div>
+</div>
