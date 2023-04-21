@@ -45,10 +45,10 @@ li {
   a {
     display: flex;
     align-items: center;
-    // gap: 0.8em;
     text-decoration: none;
     color: #fff;
     margin-bottom: 0.5rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -59,4 +59,42 @@ img {
   margin-right: 0.8rem;
   object-fit: contain;
   //   filter: grayscale(100%);
+}
+span {
+}
+.toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  &-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff1a;
+    border: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s;
+  }
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #585858;
+    font-size: 32px;
+  }
+  &-span {
+    color: #585858;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  &:hover &-button {
+    background-color: #8b8b8b;
+  }
+  &:hover &-icon {
+    color: #2e2e2e;
+  }
 }

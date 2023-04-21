@@ -16,5 +16,5 @@ export class SideBarComponent {
     'rpg',
     'shooter',
   ];
-  public showAllItems = true;
+  public showAllItems = false;
 }

@@ -5,7 +5,7 @@
     <ul>
       <li
         *ngFor="let genre of genres; let i = index"
-        [ngClass]="{ 'display-none': showAllItems }"
+        [ngClass]="{ 'display-none': i > 2 && !showAllItems }"
       >
         <ng-container>
           <a href="">
@@ -17,7 +17,17 @@
           </a>
         </ng-container>
       </li>
-      <button (click)="showAllItems = !showAllItems">show_more</button>
+
+      <div class="toggle" (click)="showAllItems = !showAllItems">
+        <button class="toggle-button">
+          <mat-icon class="toggle-icon"
+            >expand_{{ showAllItems == false ? "more" : "less" }}</mat-icon
+          >
+        </button>
+        <span class="toggle-span">{{
+          showAllItems == false ? "Show all" : "Hide"
+        }}</span>
+      </div>
     </ul>
   </div>
 </div>
